@@ -4,14 +4,14 @@ function isBalanced(str) {
   for (const s of [...str]) {
     if (s === "{") {
       stack.push("{");
-      console.log(s);
     } else if (s === "}") {
-      if (!stack) return false;
+      if (!stack.length) return false;
+
       stack.pop();
     }
   }
-  return true;
-} // false // false // false // true // false // false
+  return !stack.length;
+} // false // false // true // true // false // false
 
 console.log(isBalanced("}{"));
 console.log(isBalanced("{{}"));

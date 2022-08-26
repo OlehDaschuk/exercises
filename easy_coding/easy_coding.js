@@ -44,7 +44,7 @@ missing([1, 2, 3, 4]); // undefined
 9; // isBalanced - Takes a string and returns true or false indicating whether its curly braces are balanced.
 isBalanced("}{"); // false
 isBalanced("{{}"); // false
-isBalanced("{}{}"); // false
+isBalanced("{}{}"); // true
 isBalanced("foo { bar { baz } boo }"); // true
 isBalanced("foo { bar { baz }"); // false
 isBalanced("foo { bar } }"); // false
